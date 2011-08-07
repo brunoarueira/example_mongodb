@@ -1,0 +1,14 @@
+development:
+  adapter: 'mongodb'
+  hostname: 'localhost'
+  database: 'example_mongodb-dev'
+
+production:
+  adapter: 'mongodb'
+  hostname: 'localhost'
+  database: 'example_mongodb'
+
+test:
+  adapter: 'mongodb'
+  hostname: 'localhost'
+  database: 'example_mongodb-test'
