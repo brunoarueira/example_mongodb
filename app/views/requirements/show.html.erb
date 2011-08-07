@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @requirement.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @requirement.description %>
+</p>
+
+<%= link_to 'Edit', edit_user_requirement_path(@requirement) %> |
+<%= link_to 'Back', user_requirements_path %>
