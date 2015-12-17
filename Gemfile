@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '4.2.5'
 gem 'mongo_mapper'
 gem 'inherited_resources'
 
