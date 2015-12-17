@@ -121,7 +121,7 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   inherited_resources (= 1.6.0)
-  mongo_mapper
+  mongo_mapper (= 0.13.1)
   rails (= 4.2.5)
 
 BUNDLED WITH
