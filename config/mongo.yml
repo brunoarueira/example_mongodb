@@ -1,0 +1,23 @@
+defaults: &defaults
+  host: 127.0.0.1:27017
+  options:
+    w: 1
+    pool_size: 1
+    slave_ok: false
+    ssl: false
+
+development:
+  <<: *defaults
+  database: example_mongodb_development
+
+test:
+  <<: *defaults
+  database: example_mongodb_test
+  w: 0
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  database: example_mongodb
+  username: <%= ENV['MONGO_USERNAME'] %>
+  password: <%= ENV['MONGO_PASSWORD'] %>
