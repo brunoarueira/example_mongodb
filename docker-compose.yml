@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  mongo:
+    build:
+      context: .
+    ports:
+      - 27017:27017
+    image: custom-mongo-alpine:1.0.0
