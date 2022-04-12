@@ -84,7 +84,7 @@ GEM
       plucky (~> 0.8.0)
       rexml
     nio4r (2.5.8)
-    nokogiri (1.13.3)
+    nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     plucky (0.8.0)
