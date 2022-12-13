@@ -64,7 +64,7 @@ GEM
       has_scope (~> 0.6)
       railties (>= 5.0, < 6.0)
       responders (~> 2.0)
-    loofah (2.18.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
