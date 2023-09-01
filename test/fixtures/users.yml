@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  email: MyString
+  email: one@localhost.dev
 
 two:
   name: MyString
-  email: MyString
+  email: two@localhost.dev

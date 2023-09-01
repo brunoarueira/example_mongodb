@@ -6,44 +6,63 @@ class RequirementsControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    get :index
+    get :index, params: { user_id: @requirement.user.to_param }
+
     assert_response :success
+
     assert_not_nil assigns(:requirements)
   end
 
   test "should get new" do
-    get :new
+    get :new, params: { user_id: @requirement.user.to_param }
+
     assert_response :success
   end
 
   test "should create requirement" do
     assert_difference('Requirement.count') do
-      post :create, :requirement => @requirement.attributes
+      post(
+        :create,
+        params: {
+          user_id: @requirement.user.to_param,
+          requirement: @requirement.attributes.except('_id', 'user_id')
+        }
+      )
     end
 
-    assert_redirected_to requirement_path(assigns(:requirement))
+    assert_redirected_to user_requirements_path(user_id: @requirement.user.to_param)
   end
 
   test "should show requirement" do
-    get :show, :id => @requirement.to_param
+    get :show, params: { user_id: @requirement.user.to_param, id: @requirement.to_param }
+
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => @requirement.to_param
+    get :edit, params: { user_id: @requirement.user.to_param, id: @requirement.to_param }
+
     assert_response :success
   end
 
   test "should update requirement" do
-    put :update, :id => @requirement.to_param, :requirement => @requirement.attributes
-    assert_redirected_to requirement_path(assigns(:requirement))
+    put(
+      :update,
+      params: {
+        user_id: @requirement.user.to_param,
+        id: @requirement.to_param,
+        requirement: @requirement.attributes.except('_id', 'user_id')
+      }
+    )
+
+    assert_redirected_to user_requirements_path(user_id: @requirement.user.to_param)
   end
 
   test "should destroy requirement" do
     assert_difference('Requirement.count', -1) do
-      delete :destroy, :id => @requirement.to_param
+      delete :destroy, params: { user_id: @requirement.user.to_param, id: @requirement.to_param }
     end
 
-    assert_redirected_to requirements_path
+    assert_redirected_to user_requirements_path(user_id: @requirement.user.to_param)
   end
 end
