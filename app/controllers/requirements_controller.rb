@@ -1,5 +1,4 @@
-class RequirementsController < InheritedResources::Base
-  respond_to :html
+class RequirementsController < BaseController
   belongs_to :user
 
   def create
@@ -10,8 +9,9 @@ class RequirementsController < InheritedResources::Base
     update! { collection_url }
   end
 
-#  protected
-#    def begin_of_association_chain
-#      @user ||= User.find(params[:user_id])
-#    end
+  private
+
+  def permitted_params
+    params.permit(requirement: [:title, :description])
+  end
 end

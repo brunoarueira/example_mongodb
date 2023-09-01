@@ -3,9 +3,9 @@
 one:
   title: MyString
   description: MyString
-  user: 
+  user: users(:one)
 
 two:
   title: MyString
   description: MyString
-  user: 
+  user: users(:two)
