@@ -1,3 +1,16 @@
+GIT
+  remote: https://github.com/brunoarueira/mongomapper.git
+  revision: f41dadb9fb414055017fac9a09b12a948f2342a2
+  branch: fix/aliases-true
+  specs:
+    mongo_mapper (0.16.0)
+      activemodel (>= 5.0)
+      activemodel-serializers-xml (~> 1.0)
+      activesupport (>= 5.0)
+      mongo (~> 2.0)
+      plucky (~> 0.8.0)
+      rexml
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -103,13 +116,6 @@ GEM
     minitest (5.19.0)
     mongo (2.20.0)
       bson (>= 4.14.1, < 6.0.0)
-    mongo_mapper (0.15.6)
-      activemodel (>= 5.0)
-      activemodel-serializers-xml (~> 1.0)
-      activesupport (>= 5.0)
-      mongo (~> 2.0)
-      plucky (~> 0.8.0)
-      rexml
     net-imap (0.3.7)
       date
       net-protocol
@@ -180,9 +186,9 @@ PLATFORMS
 
 DEPENDENCIES
   inherited_resources (~> 1.13.0)
-  mongo_mapper (~> 0.15.0)
+  mongo_mapper!
   rails (~> 7.0)
   rails-controller-testing
 
 BUNDLED WITH
-   2.1.4
+   2.5.9
