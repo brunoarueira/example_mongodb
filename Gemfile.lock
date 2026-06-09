@@ -133,7 +133,7 @@ GEM
     minitest (5.27.0)
     mongo (2.20.0)
       bson (>= 4.14.1, < 6.0.0)
-    net-imap (0.5.14)
+    net-imap (0.5.15)
       date
       net-protocol
     net-pop (0.1.2)
